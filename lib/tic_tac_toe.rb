@@ -33,11 +33,7 @@ class TicTacToe
   end
   def turn
     puts "Please enter 1-9:"
-    if turn_count.odd? == true
-      token = "O"
-    elsif turn_count.even? == true
-      token = "X"
-    end
+    token = current_player
     number = gets.strip
     index = input_to_index(number)
     if valid_move?(index)
